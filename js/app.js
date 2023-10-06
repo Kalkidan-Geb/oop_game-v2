@@ -13,14 +13,15 @@ startButton.addEventListener('click', () => {
     // start a new game
 
     newGame = new Game();
-    newGame.startgame();
-    newGame.reset();
+    newGame.startGame();
+    newGame.resetGame();
 })
 
 // try to add the event listener to the onscreen keyboard
 keyBoard.addEventListener('click', (e) => {
+
 if (e.target.tagName === 'BUTTON') {
-    newGame.handleInteraction(e) }
+    newGame.handleInteraction(e.target) }
 })
 
 // add
