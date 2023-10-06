@@ -14,25 +14,25 @@ class Phrase{
 
         phraseLetters.forEach(letter => {
             const li = document.createElement('li');
-            if (letter === ''){
+            if (letter === ' '){
                 li.className = 'space';
             } else {
-                li.className = 'hide letter ${letter}';
+                li.className = `hide letter ${letter}`;
                 li.textContent = letter;
             }
             checkPhrase.appendChild(li);
         });
     }
 
-checkletter(letter){
-    return this.phrase.includes(letter)
+checkLetter(letter){
+    return this.phrase.includes(letter);
 }
 
 showMatchedLetter(letter){
     const lettersMatched = document.querySelectorAll(`.letter.${letter}`);
     lettersMatched.forEach(letterMatched => {
         letterMatched.classList.remove('hide');
-        lettersMatched.classlist.add('show');
+        letterMatched.classList.add('show');
     });
 }
 }
